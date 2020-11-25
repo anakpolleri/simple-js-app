@@ -1,4 +1,4 @@
-let pokemonRepository = (function () {
+let pokemonRepository = (function() {
 let pokemonList = [
   {
     name: "Charmandor",
@@ -16,3 +16,17 @@ let pokemonList = [
     type: ['water','psychic'],
   }
 ];
+function add(pokemon) {
+pokemonList.push(pokemon);
+}
+function getAll() {
+  return pokemonList;
+}
+return {
+  add: add,
+  getAll: getAll,
+};
+})();
+pokemonRepository.getAll().forEach(function(pokemon){
+  document.write(pokemon.name + "- type: " + pokemon.type + "-" + " (height " + pokemon.height + ")" + "<br>");
+});
