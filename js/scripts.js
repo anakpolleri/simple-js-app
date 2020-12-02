@@ -21,7 +21,7 @@ if (pokemonList.height === 5.03){
   console.log('Same height as Ana');
 }
 // for loop //
-for(let i = 0; i < 10; i++) {
+for(let i = 0; i < pokemonList.length; i++) {
   console.log(i);
 }
 
