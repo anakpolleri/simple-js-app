@@ -16,14 +16,13 @@ let pokemonList = [
     type: ['water','psychic'],
   }
 ];
-// conditionals //
-if (pokemonList.height === 5.03){
-  console.log('Same height as Ana');
-}
 // for loop //
-for(let i = 0; i < pokemonList.length; i++) {
-  console.log(i);
+let pokemonListNames = ['Charmandor', 'Jigglypuff', 'Slowbro'];
+
+for (let i = 0; i < pokemonListNames.length; i++){
+  console.log(pokemonListNames[i]);
 }
+
 
 function add(pokemon) {
 pokemonList.push(pokemon);
