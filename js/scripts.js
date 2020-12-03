@@ -1,3 +1,15 @@
+// IIFY //
+(function (){
+  let data = {};
+
+  function add(pokemon){
+    pokemonList.push(pokemon);
+    }
+    function getAll (){
+      return pokemonList;
+    }
+  }
+
 let pokemonRepository = (function() {
 let pokemonList = [
   {
@@ -22,6 +34,11 @@ let pokemonListNames = ['Charmandor', 'Jigglypuff', 'Slowbro'];
 for (let i = 0; i < pokemonListNames.length; i++){
   console.log(pokemonListNames[i]);
 }
+// for each loop //
+
+pokemonList.forEach(function(pokemon) {
+  console.log(pokemon.name + 'is' + pokemon.height + 'inches tall');
+});
 
 
 function add(pokemon) {
@@ -38,3 +55,4 @@ return {
 pokemonRepository.getAll().forEach(function(pokemon){
   document.write(pokemon.name + "- type: " + pokemon.type + "-" + " (height " + pokemon.height + ")" + "<br>");
 });
+})();
