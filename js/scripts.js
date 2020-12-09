@@ -22,10 +22,21 @@
    function add(pokemon) {
      list.push(pokemon);
    }  
+
+  // for loop
+  for (let i = 0; i < pokemonList.length; i++) {
+    if (pokemonList[i].height >1 && pokemonList[i].height <2) {
+      document.write(pokemonList[i].name + " type: " + pokemonList[i].type + " " + " (height " + pokemonList[i].height +")" + " - they are the smallest" + "<br>" );
+    } else {
+      document.write(pokemonList[i].name + " type: " + pokemonList[i].type + " " + " (height " + pokemonList[i].height +")" + " <br> ");
+    }
+  }
+  
   // for each loop
   function myPokeList(pokemon) {
     console.log(pokemon.name + " has a height of: " + pokemon.height + " and type of: " + pokemon.type);
   }
+
   function getAll() {
   return list; 
   }
@@ -59,6 +70,5 @@ console.log("my new pokemon list: ", allPokemon);
 //print list with item details with forEach function
 pokemonRepository.getAll().forEach(function (pokemon) {
   pokemonRepository.myPokeList(pokemon);
-  document.write(pokemon.name + "- type: " + pokemon.type + "-" + " (height " + pokemon.height + ")" + "<br>");
 });
 
