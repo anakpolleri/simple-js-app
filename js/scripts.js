@@ -22,19 +22,10 @@
    function add(pokemon) {
      list.push(pokemon);
    }  
-
-  // for loop
-  for (let i = 0; i < pokemonList.length; i++) {
-    if (pokemonList[i].height >1 && pokemonList[i].height <2) {
-      document.write(pokemonList[i].name + " type: " + pokemonList[i].type + " " + " (height " + pokemonList[i].height +")" + " - they are the smallest" + "<br>" );
-    } else {
-      document.write(pokemonList[i].name + " type: " + pokemonList[i].type + " " + " (height " + pokemonList[i].height +")" + " <br> ");
-    }
-  }
   
   // for each loop
   function myPokeList(pokemon) {
-    console.log(pokemon.name + " has a height of: " + pokemon.height + " and type of: " + pokemon.type);
+    document.write(pokemon.name + " has a height of: " + pokemon.height + " and type of: " + pokemon.type + "<br>");
   }
 
   function getAll() {
