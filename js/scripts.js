@@ -23,9 +23,21 @@
      list.push(pokemon);
    }  
   
-  // for each loop
-  function myPokeList(pokemon) {
-    document.write(pokemon.name + " has a height of: " + pokemon.height + " and type of: " + pokemon.type + "<br>");
+  // created button
+  function addListItem(pokemon) {
+    let list = document.querySelector(".pokemon-list"); // class from index.html
+    let listItem = document.createElement("li");
+    let button = document.createElement("button");
+    button.innerText = pokemon.name;
+    button.classList.add("button-class") // class for style.css 
+    listItem.appendChild(button);
+    list.appendChild(listItem);
+    button.addEventListener("click", function(event){ // allows you to click on pokemon
+      showDetails(pokemon);
+    });
+  }
+  function showDetails(pokemon) { // will show pokemon detail in console
+    console.log(pokemon.name + " " + pokemon.type);
   }
 
   function getAll() {
@@ -33,8 +45,8 @@
   }
     return {
       add: add,
-      myPokeList: myPokeList,
       getAll: getAll,
+      addListItem: addListItem,
     };
   })();
 // add external pokemonList to IIFE pokemonRepository
@@ -60,6 +72,6 @@ pokemonRepository.add(newPokemon);
 console.log("my new pokemon list: ", allPokemon);
 //print list with item details with forEach function
 pokemonRepository.getAll().forEach(function (pokemon) {
-  pokemonRepository.myPokeList(pokemon);
+  pokemonRepository.addListItem(pokemon);
 });
 
